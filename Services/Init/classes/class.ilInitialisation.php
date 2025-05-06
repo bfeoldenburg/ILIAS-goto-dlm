@@ -58,6 +58,18 @@ if (null === $DIC) {
  */
 class ilInitialisation
 {
+    public static function setRequireBD($val) {
+        $_SESSION['requireBD'] = $val;
+    }
+
+    public static function getRequireBD() {
+        if (array_key_exists('requireBD', $_SESSION)) {
+            return $_SESSION['requireBD'];
+        } else {
+            return 0;
+        }
+    }
+
     /**
      * Remove unsafe characters from GET
      */

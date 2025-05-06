@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <style>
+   body {
+     font-family: Verdana, Arial, Helvetica, sans-serif;
+     font-size: 16px;
+     line-height: 1.42857143;
+     color: #111111;
+     background-color: #fafafa;
+   }
+
+   #all{
+     margin-top: 30px;
+     margin-left: 30px;
+     margin-right: 30px;
+   }
+
+   #info {
+     display: block;
+     color: #111111;
+   }
+
+   #warn {
+     display: block;
+     color: #ee2222;
+   }
+
+   #header {
+     display: block;
+     font-weight: bold;
+     font-size: 18px;
+   }
+
+   #intro, #btns {
+     display: block;
+   }
+
+   fieldset {
+     display: block;
+     padding-top: 0.35em;
+     padding-bottom: 0.625em;
+     padding-left: 0.75em;
+     padding-right: 0.75em;
+   }
+
+   #usrtbl {
+      border-collapse: collapse;
+   }
+
+   #usrtbl td, #usrtbl th {
+      border: 1px solid #ddd;
+      text-align: left;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 15px;
+      padding-right: 15px;
+   }
+
+   #usrtbl tr:nth-child(even) {
+      background-color: #eee;
+   }
+   </style>
+</head>
+<body>
+<div id="all">
+<!-- BEGIN mk_header -->
+<div id="header">Tool Kurs-Administration{HEADINFO2}</div>
+<!-- END mk_header -->
+<div id="intro">
+<br/>
+</div>
+<form method="post" action="?">
+<div id="courseitems">
+<fieldset>
+<legend>Kurs:</legend>
+<table id="crsitems">
+<tr>
+<!-- BEGIN mk_crsitems -->
+   <td><input type="text" name="course" id="course" size="35" placeholder="Adalbert Zajadacz GmbH & Co. KG" value="{CRSNAME}" disabled></td>
+<!-- END mk_crsitems -->
+</tr>
+</table>
+</fieldset
+</div>
+<p></p>
+<p></p>
+<div id="useritems">
+<fieldset>
+<legend>Benutzer:</legend>
+<table id="usritems">
+<!-- BEGIN mk_usritems -->
+<tr>
+  <td><input type="text" name="login_0" id="login_0" placeholder="Loginname" value="{LOGIN_0}"></td>
+  <td><input type="radio" name="gender_0" id="gender_01" value="male" {GENDER_01}><label for="gender_01"> Herr</label></td>
+  <td><input type="radio" name="gender_0" id="gender_02" value="female" {GENDER_02}><label for="gender_02"> Frau</label></td>
+  <td><input type="radio" name="gender_0" id="gender_03" value="other" {GENDER_03}><label for="gender_03"> divers</label></td>
+  <td><input type="text" name="first_0" id="first_0" placeholder="Vorname" value="{FIRST_0}"></td>
+  <td><input type="text" name="last_0" id="last_0" placeholder="Nachname" value="{LAST_0}"></td>
+  <td><input type="text" name="email_0" id="email_0" size="30" placeholder="Email" value="{EMAIL_0}"></td>
+  <td><input type="radio" name="crsrole_0" id="crsrole_01" value="tutor" {CRSROLE_01}><label for="crsrole_01"> Tutor</label></td>
+  <td><input type="radio" name="crsrole_0" id="crsrole_02" value="member" {CRSROLE_02}><label for="crsrole_02"> Mitglied</label></td>
+</tr>
+<tr>
+  <td><input type="text" name="login_1" id="login_1" placeholder="Loginname" value="{LOGIN_1}"></td>
+  <td><input type="radio" name="gender_1" id="gender_11" value="male" {GENDER_11}><label for="gender_11"> Herr</label></td>
+  <td><input type="radio" name="gender_1" id="gender_12" value="female" {GENDER_12}><label for="gender_12"> Frau</label></td>
+  <td><input type="radio" name="gender_1" id="gender_13" value="other" {GENDER_13}><label for="gender_13"> divers</label></td>
+  <td><input type="text" name="first_1" id="first_1" placeholder="Vorname" value="{FIRST_1}"></td>
+  <td><input type="text" name="last_1" id="last_1" placeholder="Nachname" value="{LAST_1}"></td>
+  <td><input type="text" name="email_1" id="email_1" size="30" placeholder="Email" value="{EMAIL_1}"></td>
+  <td><input type="radio" name="crsrole_1" id="crsrole_11" value="tutor" {CRSROLE_11}><label for="crsrole_11"> Tutor</label></td>
+  <td><input type="radio" name="crsrole_1" id="crsrole_12" value="member" {CRSROLE_12}><label for="crsrole_12"> Mitglied</label></td>
+</tr>
+<tr>
+  <td><input type="text" name="login_2" id="login_2" placeholder="Loginname" value="{LOGIN_2}"></td>
+  <td><input type="radio" name="gender_2" id="gender_21" value="male" {GENDER_21}><label for="gender_21"> Herr</label></td>
+  <td><input type="radio" name="gender_2" id="gender_22" value="female" {GENDER_22}><label for="gender_22"> Frau</label></td>
+  <td><input type="radio" name="gender_2" id="gender_23" value="other" {GENDER_23}><label for="gender_23"> divers</label></td>
+  <td><input type="text" name="first_2" id="first_2" placeholder="Vorname" value="{FIRST_2}"></td>
+  <td><input type="text" name="last_2" id="last_2" placeholder="Nachname" value="{LAST_2}"></td>
+  <td><input type="text" name="email_2" id="email_2" size="30" placeholder="Email" value="{EMAIL_2}"></td>
+  <td><input type="radio" name="crsrole_2" id="crsrole_21" value="tutor" {CRSROLE_21}><label for="crsrole_21"> Tutor</label></td>
+  <td><input type="radio" name="crsrole_2" id="crsrole_22" value="member" {CRSROLE_22}><label for="crsrole_22"> Mitglied</label></td>
+</tr>
+<tr>
+  <td><input type="text" name="login_3" id="login_3" placeholder="Loginname" value="{LOGIN_3}"></td>
+  <td><input type="radio" name="gender_3" id="gender_31" value="male" {GENDER_31}><label for="gender_31"> Herr</label></td>
+  <td><input type="radio" name="gender_3" id="gender_32" value="female" {GENDER_32}><label for="gender_32"> Frau</label></td>
+  <td><input type="radio" name="gender_3" id="gender_33" value="other" {GENDER_33}><label for="gender_33"> divers</label></td>
+  <td><input type="text" name="first_3" id="first_3" placeholder="Vorname" value="{FIRST_3}"></td>
+  <td><input type="text" name="last_3" id="last_3" placeholder="Nachname" value="{LAST_3}"></td>
+  <td><input type="text" name="email_3" id="email_3" size="30" placeholder="Email" value="{EMAIL_3}"></td>
+  <td><input type="radio" name="crsrole_3" id="crsrole_31" value="tutor" {CRSROLE_31}><label for="crsrole_31"> Tutor</label></td>
+  <td><input type="radio" name="crsrole_3" id="crsrole_32" value="member" {CRSROLE_32}><label for="crsrole_32"> Mitglied</label></td>
+</tr>
+<tr>
+  <td><input type="text" name="login_4" id="login_4" placeholder="Loginname" value="{LOGIN_4}"></td>
+  <td><input type="radio" name="gender_4" id="gender_41" value="male" {GENDER_41}><label for="gender_41"> Herr</label></td>
+  <td><input type="radio" name="gender_4" id="gender_42" value="female" {GENDER_42}><label for="gender_42"> Frau</label></td>
+  <td><input type="radio" name="gender_4" id="gender_43" value="other" {GENDER_43}><label for="gender_43"> divers</label></td>
+  <td><input type="text" name="first_4" id="first_4" placeholder="Vorname" value="{FIRST_4}"></td>
+  <td><input type="text" name="last_4" id="last_4" placeholder="Nachname" value="{LAST_4}"></td>
+  <td><input type="text" name="email_4" id="email_4" size="30" placeholder="Email" value="{EMAIL_4}"></td>
+  <td><input type="radio" name="crsrole_4" id="crsrole_41" value="tutor" {CRSROLE_41}><label for="crsrole_41"> Tutor</label></td>
+  <td><input type="radio" name="crsrole_4" id="crsrole_42" value="member" {CRSROLE_42}><label for="crsrole_42"> Mitglied</label></td>
+</tr>
+<tr>
+  <td><input type="text" name="login_5" id="login_5" placeholder="Loginname" value="{LOGIN_5}"></td>
+  <td><input type="radio" name="gender_5" id="gender_51" value="male" {GENDER_51}><label for="gender_51"> Herr</label></td>
+  <td><input type="radio" name="gender_5" id="gender_52" value="female" {GENDER_52}><label for="gender_52"> Frau</label></td>
+  <td><input type="radio" name="gender_5" id="gender_53" value="other" {GENDER_53}><label for="gender_53"> divers</label></td>
+  <td><input type="text" name="first_5" id="first_5" placeholder="Vorname" value="{FIRST_5}"></td>
+  <td><input type="text" name="last_5" id="last_5" placeholder="Nachname" value="{LAST_5}"></td>
+  <td><input type="text" name="email_5" id="email_5" size="30" placeholder="Email" value="{EMAIL_5}"></td>
+  <td><input type="radio" name="crsrole_5" id="crsrole_51" value="tutor" {CRSROLE_51}><label for="crsrole_51"> Tutor</label></td>
+  <td><input type="radio" name="crsrole_5" id="crsrole_52" value="member" {CRSROLE_52}><label for="crsrole_52"> Mitglied</label></td>
+</tr>
+<tr>
+  <td><input type="text" name="login_6" id="login_6" placeholder="Loginname" value="{LOGIN_6}"></td>
+  <td><input type="radio" name="gender_6" id="gender_61" value="male" {GENDER_61}><label for="gender_61"> Herr</label></td>
+  <td><input type="radio" name="gender_6" id="gender_62" value="female" {GENDER_62}><label for="gender_62"> Frau</label></td>
+  <td><input type="radio" name="gender_6" id="gender_63" value="other" {GENDER_63}><label for="gender_63"> divers</label></td>
+  <td><input type="text" name="first_6" id="first_6" placeholder="Vorname" value="{FIRST_6}"></td>
+  <td><input type="text" name="last_6" id="last_6" placeholder="Nachname" value="{LAST_6}"></td>
+  <td><input type="text" name="email_6" id="email_6" size="30" placeholder="Email" value="{EMAIL_6}"></td>
+  <td><input type="radio" name="crsrole_6" id="crsrole_61" value="tutor" {CRSROLE_61}><label for="crsrole_61"> Tutor</label></td>
+  <td><input type="radio" name="crsrole_6" id="crsrole_62" value="member" {CRSROLE_62}><label for="crsrole_62"> Mitglied</label></td>
+</tr>
+<tr>
+  <td><input type="text" name="login_7" id="login_7" placeholder="Loginname" value="{LOGIN_7}"></td>
+  <td><input type="radio" name="gender_7" id="gender_71" value="male" {GENDER_71}><label for="gender_71"> Herr</label></td>
+  <td><input type="radio" name="gender_7" id="gender_72" value="female" {GENDER_72}><label for="gender_72"> Frau</label></td>
+  <td><input type="radio" name="gender_7" id="gender_73" value="other" {GENDER_73}><label for="gender_73"> divers</label></td>
+  <td><input type="text" name="first_7" id="first_7" placeholder="Vorname" value="{FIRST_7}"></td>
+  <td><input type="text" name="last_7" id="last_7" placeholder="Nachname" value="{LAST_7}"></td>
+  <td><input type="text" name="email_7" id="email_7" size="30" placeholder="Email" value="{EMAIL_7}"></td>
+  <td><input type="radio" name="crsrole_7" id="crsrole_71" value="tutor" {CRSROLE_71}><label for="crsrole_71"> Tutor</label></td>
+  <td><input type="radio" name="crsrole_7" id="crsrole_72" value="member" {CRSROLE_72}><label for="crsrole_72"> Mitglied</label></td>
+</tr>
+
+<!-- END mk_usritems -->
+</table>
+<br/>
+<table>
+<tr>
+   <td>Passwort: &nbsp;<input type="text" name="pwd" id="pwd" placeholder="Passwort" value="{PWD}"></td>
+</tr>
+</table>
+</fieldset
+</div>
+<br/>
+<!-- BEGIN mk_btnitems -->
+<div id="btns">
+   <input type="submit" name='createLoginNames' id='createLoginNames' value="Loginnamen erzeugen">&nbsp;<input type="submit" name='submit' id='submit' value="... uuund action!" {STATUSSUBMIT}>
+</div>
+<!-- END mk_btnitems -->
+</form>
+<!-- BEGIN mk_info -->
+   <div id="warn">{MKWARN}</div>
+   <div id="info">
+      <br/>
+      {MKINFO}
+      <table id="usrtbl">
+         <tr>
+            <th>{TH_LOGIN}</th>
+            <th>{TH_PWD}</th>
+            <th>{TH_FIRST}</th>
+            <th>{TH_LAST}</th>
+            <th>{TH_ROLE}</th>
+         </tr>
+         <tr>
+            <td>{TLOGIN_0}</td>
+            <td>{TPWD_0}</td>
+            <td>{TFIRST_0}</td>
+            <td>{TLAST_0}</td>
+            <td>{TROLE_0}</td>
+         </tr>
+         <tr>
+            <td>{TLOGIN_1}</td>
+            <td>{TPWD_1}</td>
+            <td>{TFIRST_1}</td>
+            <td>{TLAST_1}</td>
+            <td>{TROLE_1}</td>
+         </tr>
+         <tr>
+            <td>{TLOGIN_2}</td>
+            <td>{TPWD_2}</td>
+            <td>{TFIRST_2}</td>
+            <td>{TLAST_2}</td>
+            <td>{TROLE_2}</td>
+         </tr>
+         <tr>
+            <td>{TLOGIN_3}</td>
+            <td>{TPWD_3}</td>
+            <td>{TFIRST_3}</td>
+            <td>{TLAST_3}</td>
+            <td>{TROLE_3}</td>
+         </tr>
+         <tr>
+            <td>{TLOGIN_4}</td>
+            <td>{TPWD_4}</td>
+            <td>{TFIRST_4}</td>
+            <td>{TLAST_4}</td>
+            <td>{TROLE_4}</td>
+         </tr>
+         <tr>
+            <td>{TLOGIN_5}</td>
+            <td>{TPWD_5}</td>
+            <td>{TFIRST_5}</td>
+            <td>{TLAST_5}</td>
+            <td>{TROLE_5}</td>
+         </tr>
+         <tr>
+            <td>{TLOGIN_6}</td>
+            <td>{TPWD_6}</td>
+            <td>{TFIRST_6}</td>
+            <td>{TLAST_6}</td>
+            <td>{TROLE_6}</td>
+         </tr>
+         <tr>
+            <td>{TLOGIN_7}</td>
+            <td>{TPWD_7}</td>
+            <td>{TFIRST_7}</td>
+            <td>{TLAST_7}</td>
+            <td>{TROLE_7}</td>
+         </tr>
+      </table>
+   </div>
+<!-- END mk_info -->
+
+</div>
+</body>
+</html>

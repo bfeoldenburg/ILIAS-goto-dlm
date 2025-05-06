@@ -1380,6 +1380,12 @@ class ilStartUpGUI implements ilCtrlBaseClassInterface, ilCtrlSecurityInterface
 
         $access = $DIC->access();
 
+        if (isset($_REQUEST['rbd']) && ($_REQUEST['rbd'] == 1)) {
+            ilInitialisation::setRequireBD(1);
+        } else {
+            ilInitialisation::setRequireBD(0);
+        }
+
         foreach ($component_factory->getActivePluginsInSlot('uihk') as $ui_plugin) {
             /** @var ilUIHookPluginGUI $gui_class */
             $gui_class = $ui_plugin->getUIClassInstance();

@@ -58,6 +58,10 @@ footer{
 		margin-right: $il-margin-xs-horizontal;
 	}
 
+	.il-footer-permanent-url > button {
+		color: #b9aaa1;
+	}
+
 	.il-footer-text {
 		margin: $il-margin-small-vertical $il-margin-xs-horizontal $il-margin-large-vertical 0px;
 	}

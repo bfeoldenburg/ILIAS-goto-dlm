@@ -348,7 +348,8 @@ abstract class SurveyQuestionEvaluation
     {
         return array(
             // flot "default" theme
-            "#edc240", "#afd8f8", "#cb4b4b", "#4da74d", "#9440ed",
+            //"#edc240", "#afd8f8", "#cb4b4b", "#4da74d", "#9440ed",
+            "#4da74d", "#83beec", "#e8825d", "#cb4b4b", "#9440ed",
             // http://godsnotwheregodsnot.blogspot.de/2012/09/color-distribution-methodology.html
             "#1CE6FF", "#FF34FF", "#FF4A46", "#008941", "#006FA6", "#A30059",
             "#FFDBE5", "#7A4900", "#0000A6", "#63FFAC", "#B79762", "#004D43", "#8FB0FF", "#997D87",

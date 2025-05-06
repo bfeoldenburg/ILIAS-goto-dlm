@@ -28,6 +28,7 @@ class ilUserProfile
     public const MODE_REGISTRATION = 2;
 
     private int $mode = self::MODE_DESKTOP;
+    private $requireBD = false;
 
     private ilSetting $settings;
     private ilLanguage $lng;
@@ -40,7 +41,7 @@ class ilUserProfile
 
     protected ilUserSettingsConfig $user_settings_config;
 
-    public function __construct()
+    public function __construct($bBD = false)
     {
         /** @var ILIAS\DI\Container $DIC */
         global $DIC;
@@ -50,6 +51,9 @@ class ilUserProfile
 
         $this->user_fields = (new ilUserProfileDefaultFields())->getDefaultProfileFields();
         $this->user_settings_config = new ilUserSettingsConfig();
+        if ($bBD == true) {
+            $this->requireBD = true;
+        }
 
         $this->skip_groups = [];
         $this->skip_fields = [];
@@ -492,7 +496,13 @@ class ilUserProfile
             $date = new ilDateTime($user->$method(), IL_CAL_DATE);
             $birthday_input->setDate($date);
         }
-        $birthday_input->setRequired((bool) $this->settings->get('require_' . $field_id));
+        //$birthday_input->setRequired((bool) $this->settings->get('require_' . $field_id));
+        if ( $this->requireBD == true) {
+            $birthday_input->setRequired(true);
+        } else {
+            $birthday_input->setRequired((bool) $this->settings->get('require_' . $field_id));
+        }
+
         if (!$birthday_input->getRequired() || $date !== null) {
             $birthday_input->setDisabled((bool) $this->settings->get('usr_settings_disable_' . $field_id));
         }

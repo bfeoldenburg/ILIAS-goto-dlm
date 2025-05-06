@@ -73,7 +73,12 @@ class ilAccountRegistrationGUI
 
         $this->recommended_content_manager = new ilRecommendedContentManager();
 
-        $this->user_profile = new ilUserProfile();
+        //$this->user_profile = new ilUserProfile();
+        if (ilInitialisation::getRequireBD() == 1) {
+            $this->user_profile = new ilUserProfile(true);
+        } else {
+            $this->user_profile = new ilUserProfile();
+        }
 
         $this->http = $DIC->http();
         $this->refinery = $DIC->refinery();

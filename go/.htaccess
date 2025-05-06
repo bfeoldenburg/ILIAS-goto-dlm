@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    # Neue nach oben
+
+    RewriteRule ^hve242$ https://goto.bfe-elearning.de/goto.php?target=svy_2992&client_id=c-il-goto [L]
+    RewriteRule ^hve251$ https://goto.bfe-elearning.de/goto.php?target=svy_2994&client_id=c-il-goto [L]
+    RewriteRule ^hvm251$ https://goto.bfe-elearning.de/goto.php?target=svy_2995&client_id=c-il-goto [L]
+    RewriteRule ^hvi241$ https://goto.bfe-elearning.de/goto.php?target=svy_2997&client_id=c-il-goto [L]
+
+    RewriteRule ^hve244$ https://goto.bfe-elearning.de/goto.php?target=svy_2978&client_id=c-il-goto [L]
+    RewriteRule ^hvg241$ https://goto.bfe-elearning.de/goto.php?target=svy_2921&client_id=c-il-goto [L]
+    RewriteRule ^hve241$ https://goto.bfe-elearning.de/goto.php?target=svy_2913&client_id=c-il-goto [L]
+    RewriteRule ^hvm241$ https://goto.bfe-elearning.de/goto.php?target=svy_2979&client_id=c-il-goto [L]
+
+    RewriteRule ^hve233$ https://goto.bfe-elearning.de/goto.php?target=svy_2841&client_id=c-il-goto [L]
+    # RewriteRule ^hve242$ https://goto.bfe-elearning.de/goto.php?target=svy_2842&client_id=c-il-goto [L]
+    # RewriteRule ^hvi241$ https://goto.bfe-elearning.de/goto.php?target=svy_2843&client_id=c-il-goto [L]
+    RewriteRule ^hvs231$ https://goto.bfe-elearning.de/goto.php?target=svy_2844&client_id=c-il-goto [L]
+    RewriteRule ^bwv242$ https://goto.bfe-elearning.de/goto.php?target=svy_2845&client_id=c-il-goto [L]
+
+</IfModule>

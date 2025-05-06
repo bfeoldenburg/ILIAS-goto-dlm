@@ -1546,7 +1546,7 @@ class ilUtil
             $q = 'SELECT title FROM object_data WHERE type =' . $idb->quote($type, 'string') . ' AND obj_id = ' . $r_id;
             $r = $idb->query($q);
             $row = $r->fetchRow(ilDBConstants::FETCHMODE_OBJECT);
-            if ((strpos("$row->title", "-demo") !== false) || (strpos("$row->title", "-ltd") !== false)) {
+            if ((strpos("$row->title", "-demo") !== false) || (strpos("$row->title", "-ltd") !== false) || (strpos("$row->title", "bbzb") !== false)) {
                 $rVal = true;
             }
         }

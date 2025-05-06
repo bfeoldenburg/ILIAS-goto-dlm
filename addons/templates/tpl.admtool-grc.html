@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="pragma" content="no-cache">
+	<title>ILIAS Admin-Tools</title>
+
+   <style>
+   body {
+     font-family: Verdana, Arial, Helvetica, sans-serif;
+     font-size: 16px;
+     line-height: 1.42857143;
+     color: #111111;
+     background-color: #fafafa;
+   }
+
+   #all {
+     margin-left: 30px;
+   }
+
+   #info {
+     display: block;
+     color: #111111;
+   }
+
+   #warn {
+     display: block;
+     color: #ee2222;
+   }
+
+   #header {
+     display: block;
+     font-weight: bold;
+     font-size: 18px;
+   }
+
+   #intro {
+     display: block;
+     font-weight: bold;
+     font-size: 14px;
+   }
+
+   #btns {
+     display: block;
+   }
+
+
+   </style>
+   <link href="./js/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+   <link href="./css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+</head>
+
+
+<body>
+<div id="all">
+<div id="header">Verbrauchte ILIAS-Registrierungs-Codes (EuP) anzeigen</div>
+<!-- BEGIN mk_intro -->
+<div id="intro">
+Aktueller Benutzer: {HEADINFO1} {HEADINFO2}
+</div>
+<!-- END mk_intro -->
+<br/>
+<form method="post" action="?">
+<div id="courseitems">
+<!-- BEGIN mk_crsitems -->
+<label for="rolenames">Kurs: &nbsp;</label>
+<select name="rolenames" id="rolenames">
+  <option value="" disabled selected hidden>Kurs auswählen...</option>
+  <optgroup label="BFE">
+  <option value="{UPROLES1}" {SELECT1}>{UPROLES1}</option>
+  <option value="{UPROLES2}" {SELECT2}>{UPROLES2}</option>
+  <option value="{UPROLES3}" {SELECT3}>{UPROLES3}</option>
+  <option value="{UPROLES4}" {SELECT4}>{UPROLES4}</option>
+  <option value="{UPROLES5}" {SELECT5}>{UPROLES5}</option>
+</optgroup>
+</select>
+<br/><br/><br/>
+
+<label for="dtp_input1" class="col-md-1 control-label">Beginn</label>
+<div class="input-group date form_date col-md-2" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input1" data-link-format="dd MM yyyy">
+  <input class="form-control" size="16" type="text" value={DTP1} readonly>
+  <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+</div>
+<input type="hidden" id="dtp_input1" name="dtp_input1" value={DTP1} /><br/>
+
+<label for="dtp_input2" class="col-md-1 control-label">Ende</label>
+<div class="input-group date form_date col-md-2" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="dd MM yyyy">
+  <input class="form-control" size="16" type="text" value={DTP2} readonly>
+  <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+</div>
+<input type="hidden" id="dtp_input2" name="dtp_input2" value={DTP2} /><br/>
+
+<!-- END mk_crsitems -->
+</div>
+<br />
+<!-- BEGIN mk_btnitems -->
+<div id="btns">
+   <input type="submit" name='submit' id='submit' value="Ausführen" {STATUSSUBMIT}>
+</div>
+<!-- END mk_btnitems -->
+</form>
+<!-- BEGIN mk_info -->
+   <div id="warn">{MKWARN}</div>
+   <div id="info">
+      <br/>
+      {MKINFO}
+   </div>
+<!-- END mk_info -->
+</div>
+
+<script type="text/javascript" src="./js/jquery/jquery-3.3.1.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./js/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+<script type="text/javascript" src="./js/js/locales/bootstrap-datetimepicker.de.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    $('.form_date').datetimepicker({
+	language:  'en',
+  format: 'dd.mm.yyyy',
+	weekStart: 1,
+	todayBtn:  1,
+	autoclose: 1,
+	todayHighlight: 1,
+	startView: 2,
+	minView: 2,
+	forceParse: 0
+    });
+</script>
+
+</body>
+</html>
