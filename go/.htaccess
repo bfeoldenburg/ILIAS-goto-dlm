@@ -2,6 +2,11 @@
     RewriteEngine on
     # Neue nach oben
 
+    RewriteRule ^hve243$ https://goto.bfe-elearning.de/goto.php?target=svy_3043&client_id=c-il-goto [L]
+    RewriteRule ^hvs241$ https://goto.bfe-elearning.de/goto.php?target=svy_3044&client_id=c-il-goto [L]
+    RewriteRule ^hve252$ https://goto.bfe-elearning.de/goto.php?target=svy_3045&client_id=c-il-goto [L]
+    RewriteRule ^hvi251$ https://goto.bfe-elearning.de/goto.php?target=svy_3046&client_id=c-il-goto [L]
+
     RewriteRule ^hve242$ https://goto.bfe-elearning.de/goto.php?target=svy_2992&client_id=c-il-goto [L]
     RewriteRule ^hve251$ https://goto.bfe-elearning.de/goto.php?target=svy_2994&client_id=c-il-goto [L]
     RewriteRule ^hvm251$ https://goto.bfe-elearning.de/goto.php?target=svy_2995&client_id=c-il-goto [L]
